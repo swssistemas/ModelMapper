@@ -30,6 +30,11 @@ public class ContentValuesWriter implements ModelWriter {
     }
 
     @Override
+    public void writeLong(String name, long value) {
+        contentValues.put(name, value);
+    }
+
+    @Override
     public void writeDouble(@NonNull String name, double value) {
         contentValues.put(name, value);
     }

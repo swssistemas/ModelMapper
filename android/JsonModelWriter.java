@@ -42,6 +42,15 @@ public class JsonModelWriter implements ModelWriter {
     }
 
     @Override
+    public void writeLong(String name, long value) {
+        try {
+            jsonObject.put(name, value);
+        } catch (JSONException e) {
+            Log.e(TAG, e.getMessage());
+        }
+    }
+
+    @Override
     public void writeDouble(@NonNull String name, double value) {
         try {
             jsonObject.put(name, value);

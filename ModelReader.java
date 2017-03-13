@@ -10,6 +10,7 @@ public interface ModelReader {
 
     String readString(String name, String defaultValue);
     int readInt(String name, int defaultValue);
+    long readLong(String name, long defaultValue);
     double readDouble(String name, double defaultValue);
     boolean readBoolean(String name, boolean defaultValue);
     long readDate(String name, long defaultValue);

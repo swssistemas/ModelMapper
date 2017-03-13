@@ -44,6 +44,16 @@ public class JsonModelReader implements ModelReader {
     }
 
     @Override
+    public long readLong(String name, long defaultValue) {
+        try {
+            return (!jsonObject.isNull(name)) ? jsonObject.getLong(name) : defaultValue;
+        } catch (JSONException e) {
+            Log.e(TAG, e.getMessage());
+            return 0;
+        }
+    }
+
+    @Override
     public double readDouble(@NonNull String name, double defaultValue) {
         try {
             return (!jsonObject.isNull(name)) ? jsonObject.getDouble(name) : defaultValue;

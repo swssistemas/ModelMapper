@@ -30,6 +30,12 @@ public class CursorModelReader implements ModelReader {
     }
 
     @Override
+    public long readLong(String name, long defaultValue) {
+        int index = cursor.getColumnIndex(name);
+        return index >= 0 ? cursor.getLong(index) : defaultValue;
+    }
+
+    @Override
     public double readDouble(@NonNull String name, double defaultValue) {
         int index = cursor.getColumnIndex(name);
         return index >= 0 ? cursor.getDouble(index) : defaultValue;
