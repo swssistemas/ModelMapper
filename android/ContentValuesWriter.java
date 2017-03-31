@@ -9,6 +9,7 @@ import java.util.Date;
 import sws.api.ModelWriter;
 
 /**
+ *
  * Created by jeziel on 10/03/17.
  */
 public class ContentValuesWriter implements ModelWriter {
@@ -50,7 +51,7 @@ public class ContentValuesWriter implements ModelWriter {
     }
 
     @Override
-    public void writeDate(@NonNull String name, @NonNull Date value) {
-        contentValues.put(name, value.getTime());
+    public void writeDate(@NonNull String name, Date value) {
+        contentValues.put(name, value != null ? value.getTime() : null);
     }
 }

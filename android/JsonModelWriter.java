@@ -11,6 +11,7 @@ import java.util.Date;
 import sws.api.ModelWriter;
 
 /**
+ *
  * Created by jeziel on 11/03/17.
  */
 public class JsonModelWriter implements ModelWriter {

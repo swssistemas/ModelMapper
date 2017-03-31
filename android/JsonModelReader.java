@@ -11,6 +11,7 @@ import java.util.Date;
 import sws.api.ModelReader;
 
 /**
+ *
  * Created by jeziel on 11/03/17.
  */
 public class JsonModelReader implements ModelReader {

@@ -7,6 +7,7 @@ import java.util.Date;
 import sws.api.ModelReader;
 
 /**
+ *
  * Created by jeziel on 10/03/17.
  */
 public class CursorModelReader implements ModelReader {
